@@ -2,7 +2,6 @@
 
 Shadowsocks-libev server with v2ray-plugin running in Docker.
 
-[![Docker Automated build](https://img.shields.io/docker/automated/boris1993/shadowsocks-v2ray-docker.svg)](https://hub.docker.com/r/boris1993/shadowsocks-v2ray-docker/)
 [![shadowsocks-v2ray-docker metadata](https://images.microbadger.com/badges/image/boris1993/shadowsocks-v2ray-docker:v3.2.3-1.0.svg)](https://microbadger.com/images/boris1993/shadowsocks-v2ray-docker:v3.2.3-1.0)
 [![shadowsocks-v2ray-docker tag](https://images.microbadger.com/badges/version/boris1993/shadowsocks-v2ray-docker:v3.2.3-1.0.svg)](https://microbadger.com/images/boris1993/shadowsocks-v2ray-docker:v3.2.3-1.0)
 

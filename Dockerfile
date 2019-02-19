@@ -18,7 +18,7 @@ USER root
 
 RUN set -ex \
  && apk add --no-cache --virtual .build-deps tar \
- && wget -cq -O /root/v2ray-plugin.tar.gz https://github.com/shadowsocks/v2ray-plugin/releases/download/v1.0/v2ray-plugin-linux-amd64-8cea1a3.tar.gz \
+ && wget -cq -O /root/v2ray-plugin.tar.gz https://github.com/shadowsocks/v2ray-plugin/releases/download/v1.1.0/v2ray-plugin-linux-amd64-v1.1.0.tar.gz \
  && tar xvzf /root/v2ray-plugin.tar.gz -C /root \
  && mv /root/v2ray-plugin_linux_amd64 /usr/local/bin/v2ray-plugin \
  && rm -f /root/v2ray-plugin.tar.gz \
