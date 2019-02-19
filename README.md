@@ -10,7 +10,7 @@ Shadowsocks-libev server with v2ray-plugin running in Docker.
 ## Current version
 
 + [shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev): 3.2.3
-+ [v2ray-plugin](https://github.com/shadowsocks/v2ray-plugin): 1.0
++ [v2ray-plugin](https://github.com/shadowsocks/v2ray-plugin): 1.1.0
 
 ## Usage
 
