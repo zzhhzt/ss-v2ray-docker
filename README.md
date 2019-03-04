@@ -2,14 +2,14 @@
 
 Shadowsocks-libev server with v2ray-plugin running in Docker.
 
-[![shadowsocks-v2ray-docker metadata](https://images.microbadger.com/badges/image/boris1993/shadowsocks-v2ray-docker:v3.2.3-1.0.svg)](https://microbadger.com/images/boris1993/shadowsocks-v2ray-docker:v3.2.3-1.0)
-[![shadowsocks-v2ray-docker tag](https://images.microbadger.com/badges/version/boris1993/shadowsocks-v2ray-docker:v3.2.3-1.0.svg)](https://microbadger.com/images/boris1993/shadowsocks-v2ray-docker:v3.2.3-1.0)
+[![shadowsocks-v2ray-docker metadata](https://images.microbadger.com/badges/image/boris1993/shadowsocks-v2ray-docker:v3.2.4-1.0.svg)](https://microbadger.com/images/boris1993/shadowsocks-v2ray-docker:v3.2.4-1.0)
+[![shadowsocks-v2ray-docker tag](https://images.microbadger.com/badges/version/boris1993/shadowsocks-v2ray-docker:v3.2.4-1.0.svg)](https://microbadger.com/images/boris1993/shadowsocks-v2ray-docker:v3.2.4-1.0)
 
 ---
 
 ## Current version
 
-+ [shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev): 3.2.3
++ [shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev): 3.2.4
 + [v2ray-plugin](https://github.com/shadowsocks/v2ray-plugin): 1.1.0
 
 ## Usage
@@ -19,7 +19,7 @@ Shadowsocks-libev server with v2ray-plugin running in Docker.
 I recommend use a specified tag instead of the "latest" tag. [This article explained why](https://medium.com/@mccode/the-misunderstood-docker-tag-latest-af3babfd6375).
 
 ```bash
-docker pull boris1993/shadowsocks-v2ray-docker:v3.2.3-1.0
+docker pull boris1993/shadowsocks-v2ray-docker:v3.2.4-1.0
 ```
 
 ### Start the proxy in HTTP mode
@@ -32,7 +32,7 @@ docker run \
     --restart always \
     -p <server_address>:80:1080 \
     -e PASSWORD=<password> \
-    boris1993/shadowsocks-v2ray-docker:v3.2.3-1.0
+    boris1993/shadowsocks-v2ray-docker:v3.2.4-1.0
 ```
 
 + With docker-compose
@@ -43,7 +43,7 @@ version: '3'
 
 services:
   shadowsocks-obfs-docker:
-    image: boris1993/shadowsocks-v2ray-docker:v3.2.3-1.0
+    image: boris1993/shadowsocks-v2ray-docker:v3.2.4-1.0
     restart: always
     ports:
       - <server_address>:80:1080
@@ -88,7 +88,7 @@ version: '3'
 
 services:
   shadowsocks-v2ray-docker:
-    image: boris1993/shadowsocks-v2ray-docker:v3.2.3-1.0
+    image: boris1993/shadowsocks-v2ray-docker:v3.2.4-1.0
     restart: always
     ports:
       - 127.0.0.1:10001:1080
