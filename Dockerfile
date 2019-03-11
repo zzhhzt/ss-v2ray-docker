@@ -1,4 +1,4 @@
-FROM shadowsocks/shadowsocks-libev:v3.2.4
+FROM shadowsocks/shadowsocks-libev:v3.2.5
 
 LABEL maintainer="boris <boris1993@126.com>" \
       shadowsocks-libev="https://github.com/shadowsocks/shadowsocks-libev" \
