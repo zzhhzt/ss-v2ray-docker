@@ -1,6 +1,6 @@
 FROM shadowsocks/shadowsocks-libev:v3.2.5
 
-LABEL maintainer="boris <boris1993@126.com>" \
+LABEL maintainer="boris1993 <boris1993@126.com>" \
       shadowsocks-libev="https://github.com/shadowsocks/shadowsocks-libev" \
       v2ray-plugin="https://github.com/shadowsocks/v2ray-plugin"
 
