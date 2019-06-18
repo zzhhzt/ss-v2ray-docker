@@ -1,18 +1,12 @@
-# shadowsocks-v2ray-docker
+# ss-v2ray-docker
 
 Shadowsocks-libev server with v2ray-plugin running in Docker.
-
-[![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/boris1993/shadowsocks-v2ray-docker.svg)](https://hub.docker.com/r/boris1993/shadowsocks-v2ray-docker)
-[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/boris1993/shadowsocks-v2ray-docker.svg)](https://hub.docker.com/r/boris1993/shadowsocks-v2ray-docker/builds)
-[![Docker Pulls](https://img.shields.io/docker/pulls/boris1993/shadowsocks-v2ray-docker.svg)](https://hub.docker.com/r/boris1993/shadowsocks-v2ray-docker)
-[![shadowsocks-v2ray-docker tag](https://images.microbadger.com/badges/version/boris1993/shadowsocks-v2ray-docker:v3.2.5-1.1.0.svg)](https://microbadger.com/images/boris1993/shadowsocks-v2ray-docker:v3.2.5-1.1.0)
-[![shadowsocks-v2ray-docker metadata](https://images.microbadger.com/badges/image/boris1993/shadowsocks-v2ray-docker:v3.2.5-1.1.0.svg)](https://microbadger.com/images/boris1993/shadowsocks-v2ray-docker:v3.2.5-1.1.0)
 
 ---
 
 ## Current version
 
-+ [shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev): 3.2.5
++ [shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev): 3.3.0
 + [v2ray-plugin](https://github.com/shadowsocks/v2ray-plugin): 1.1.0
 
 ## Usage
@@ -22,7 +16,7 @@ Shadowsocks-libev server with v2ray-plugin running in Docker.
 I recommend use a specified tag instead of the "latest" tag. [This article explained why](https://medium.com/@mccode/the-misunderstood-docker-tag-latest-af3babfd6375).
 
 ```bash
-docker pull boris1993/shadowsocks-v2ray-docker:v3.2.5-1.1.0
+docker pull mazy/ss-v2ray-docker:v3.3.0-1.1.0
 ```
 
 ### Start the proxy in HTTP mode
@@ -35,7 +29,7 @@ docker run \
     --restart always \
     -p <server_address>:80:1080 \
     -e PASSWORD=<password> \
-    boris1993/shadowsocks-v2ray-docker:v3.2.5-1.1.0
+    mazy/ss-v2ray-docker:v3.3.0-1.1.0
 ```
 
 + With docker-compose
@@ -46,7 +40,7 @@ version: '3'
 
 services:
   shadowsocks-obfs-docker:
-    image: boris1993/shadowsocks-v2ray-docker:v3.2.5-1.1.0
+    image: mazy/ss-v2ray-docker:v3.3.0-1.1.0
     restart: always
     ports:
       - <server_address>:80:1080
@@ -90,8 +84,8 @@ The `docker-compose.yml` is like this:
 version: '3'
 
 services:
-  shadowsocks-v2ray-docker:
-    image: boris1993/shadowsocks-v2ray-docker:v3.2.5-1.1.0
+  ss-v2ray-docker:
+    image: mazy/ss-v2ray-docker:v3.3.0-1.1.0
     restart: always
     ports:
       - 127.0.0.1:10001:1080
