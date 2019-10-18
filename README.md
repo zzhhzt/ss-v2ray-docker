@@ -8,8 +8,8 @@ Shadowsocks-libev server with v2ray-plugin running in Docker.
 
 ## Current version
 
-+ [shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev): 3.3.1
-+ [v2ray-plugin](https://github.com/shadowsocks/v2ray-plugin): 1.1.0
++ [shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev): 3.3.2
++ [v2ray-plugin](https://github.com/shadowsocks/v2ray-plugin): 1.2.0
 
 ## Usage
 
@@ -18,7 +18,7 @@ Shadowsocks-libev server with v2ray-plugin running in Docker.
 I recommend use a specified tag instead of the "latest" tag. [This article explained why](https://medium.com/@mccode/the-misunderstood-docker-tag-latest-af3babfd6375).
 
 ```bash
-docker pull mazy/ss-v2ray:v3.3.1-1.1.0
+docker pull mazy/ss-v2ray:v3.3.2-1.2.0
 ```
 
 ### Start the proxy in HTTP mode
