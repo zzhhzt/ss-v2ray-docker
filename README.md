@@ -31,7 +31,7 @@ docker run \
     --restart always \
     -p <server_address>:80:1080 \
     -e PASSWORD=<password> \
-    mazy/ss-v2ray:v3.3.1-1.1.0
+    mazy/ss-v2ray:v3.3.2-1.2.0
 ```
 
 + With docker-compose
@@ -42,7 +42,7 @@ version: '3'
 
 services:
   shadowsocks-obfs-docker:
-    image: mazy/ss-v2ray:v3.3.1-1.1.0
+    image: mazy/ss-v2ray:v3.3.2-1.2.0
     restart: always
     ports:
       - <server_address>:80:1080
@@ -87,7 +87,7 @@ version: '3'
 
 services:
   ss-v2ray-docker:
-    image: mazy/ss-v2ray:v3.3.1-1.1.0
+    image: mazy/ss-v2ray:v3.3.2-1.2.0
     restart: always
     ports:
       - 127.0.0.1:10001:1080
