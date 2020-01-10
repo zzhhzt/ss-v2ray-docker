@@ -8,7 +8,7 @@ Shadowsocks-libev server with v2ray-plugin running in Docker.
 
 ## Current version
 
-+ [shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev): 3.3.3
++ [shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev): 3.3.4
 + [v2ray-plugin](https://github.com/shadowsocks/v2ray-plugin): 1.2.0
 
 ## Usage
@@ -18,7 +18,7 @@ Shadowsocks-libev server with v2ray-plugin running in Docker.
 I recommend use a specified tag instead of the "latest" tag. [This article explained why](https://medium.com/@mccode/the-misunderstood-docker-tag-latest-af3babfd6375).
 
 ```bash
-docker pull mazy/ss-v2ray:v3.3.3-1.2.0
+docker pull mazy/ss-v2ray:v3.3.4-1.2.0
 ```
 
 ### Start the proxy in HTTP mode
@@ -31,7 +31,7 @@ docker run \
     --restart always \
     -p <server_address>:80:1080 \
     -e PASSWORD=<password> \
-    mazy/ss-v2ray:v3.3.3-1.2.0
+    mazy/ss-v2ray:v3.3.4-1.2.0
 ```
 
 + With docker-compose
@@ -42,7 +42,7 @@ version: '3'
 
 services:
   shadowsocks-obfs-docker:
-    image: mazy/ss-v2ray:v3.3.3-1.2.0
+    image: mazy/ss-v2ray:v3.3.4-1.2.0
     restart: always
     ports:
       - <server_address>:80:1080
@@ -87,7 +87,7 @@ version: '3'
 
 services:
   ss-v2ray-docker:
-    image: mazy/ss-v2ray:v3.3.3-1.2.0
+    image: mazy/ss-v2ray:v3.3.4-1.2.0
     restart: always
     ports:
       - 127.0.0.1:10001:1080
