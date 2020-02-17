@@ -1,6 +1,6 @@
 FROM shadowsocks/shadowsocks-libev:v3.3.4
 
-ENV V2RAY_PLUGIN_VERSION v1.2.0
+ENV V2RAY_PLUGIN_VERSION v1.3.0
 ENV HOST        mydomain.me
 ENV SERVER_ADDR 0.0.0.0
 ENV SERVER_PORT 1080
