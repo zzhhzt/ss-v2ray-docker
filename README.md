@@ -2,7 +2,7 @@
 
 Shadowsocks-libev server with v2ray-plugin running in Docker.
 
-[![Docker Build Status](https://img.shields.io/docker/cloud/build/mazy/ss-v2ray.svg)](https://cloud.docker.com/repository/docker/mazy/ss-v2ray)
+[![Docker Build Status](https://img.shields.io/docker/cloud/build/mazy/ss-v2ray.svg)](https://hub.docker.com/r/mazy/ss-v2ray)
 
 ---
 
