@@ -87,7 +87,7 @@ version: '3'
 
 services:
   ss-v2ray-docker:
-    image: mazy/ss-v2ray:v3.3.4-1.3.0
+    image: mazy/ss-v2ray:v3.3.4-1.3.1
     restart: always
     ports:
       - 127.0.0.1:10001:1080
