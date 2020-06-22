@@ -95,9 +95,7 @@ services:
       PASSWORD: "a-really-secure-password"
 ```
 
-### Caddy
-
-As for Caddy, I wrote a Caddyfile like this:
+### Caddy example
 
 ```Caddyfile
 www.mysite.com {
@@ -109,26 +107,66 @@ www.mysite.com {
 }
 ```
 
+### Nginx example
+
+```
+location /shadowsocks {
+  proxy_redirect off;
+  proxy_pass http://127.0.0.1:10001;
+  proxy_http_version 1.1;
+  proxy_set_header Upgrade $http_upgrade;
+  proxy_set_header Connection "upgrade";
+  proxy_set_header Host $http_host;
+}
+```
+
 ### CloudFlare
 
 I added an A record in CloudFlare DNS panel, which contains the domain, the IP address, with CDN enabled just like serving a normal website.
 
-### Client on my Mac
+### Mac
 
-I downloaded the pre-built binary and put it in `/usr/local/bin`, then I wrote a Shadowsocks configuration like this:
+```bash
+brew cask install v2ray-plugin
+brew cask install shadowsocksx-ng
+```
 
-```json
+Start shadowsocksx-ng application and add new server with these
+properties:
+|Config Name   |Value         |
+|-------------:|:-------------|
+|Address       |```www.mysite.com``` |
+|Port          |*Port of your shadowsocks instance(80 or 443 if it behind webserver)*  |
+|Encryption    |```chacha20-ietf-poly1305```|
+|Password      |```password```|
+|Plugin        |```path=/;mux=8;host=mazy.wtf;tls```|
+|Plugin Opts   |```path=/shadowsocks;host=www.mysite.com;tls```|
+
+### Linux client
+*Tested on ArchLinux, should be similar on any distribution*
+
+```
+pacman -S shadowsocks-libev shadowsocks-v2ray-plugin
+```
+
+```/etc/shadowsocks/my-config.json```
+```
 {
-    "server":"www.mysite.com",
-    "server_port":443,
-    "local_address":"0.0.0.0",
-    "local_port":1080,
-    "password":"a-really-secure-password",
-    "method":"chacha20-ietf-poly1305",
-    "fast_open":true,
-    "plugin":"/usr/local/bin/v2ray-plugin",
-    "plugin_opts":"path=/shadowsocks;host=www.mysite.com;tls"
+	"server":"www.mysite.com",
+	"server_port":443,
+	"local_port":1080,
+	"password":"password",
+	"timeout":600,
+	"method":"chacha20-ietf-poly1305",
+	"plugin":"/usr/bin/v2ray-plugin",
+	"fast_open":true,
+	"plugin_opts":"path=/shadowsocks;host=www.mysite.com;tls",
+	"reuse_port": true
 }
+```
+
+```
+systemctl enable --now shadowsocks-libev@my-config
 ```
 
 I'm connecting to port 443 because I'm using the `Full SSL` configuration in CloudFlare, which means all HTTP requests will be rewrited into a HTTPS request. And for the same reason, I made the client running in the HTTPS mode, as in `plugin_opts` section you can see I specified the `tls` flag.
