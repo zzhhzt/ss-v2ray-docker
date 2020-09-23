@@ -1,4 +1,4 @@
-FROM shadowsocks/shadowsocks-libev:v3.3.4
+FROM shadowsocks/shadowsocks-libev:v3.3.5
 
 ENV V2RAY_PLUGIN_VERSION v1.3.1
 ENV HOST        mydomain.me
