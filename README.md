@@ -1,4 +1,5 @@
 # ss-v2ray-docker
+## Deprecated: please use https://github.com/dmirubtsov/ss-xray-docker
 
 Shadowsocks-libev server with v2ray-plugin running in Docker.
 
