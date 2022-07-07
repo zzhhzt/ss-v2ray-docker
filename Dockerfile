@@ -1,7 +1,7 @@
 FROM shadowsocks/shadowsocks-libev:v3.3.5
 
 ENV V2RAY_PLUGIN_VERSION v1.3.1
-ENV HOST        mydomain.me
+ENV HOST mogenius.sonaive.eu.org  
 ENV SERVER_ADDR 0.0.0.0
 ENV SERVER_PORT 1080
 ENV PASSWORD    password
